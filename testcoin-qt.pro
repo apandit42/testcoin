@@ -67,14 +67,15 @@ contains(USE_QRCODE, 1) {
 contains(USE_UPNP, -) {
     message(Building without UPNP support)
 } else {
-    message(Building with UPNP support)
-    count(USE_UPNP, 0) {
-        USE_UPNP=1
-    }
-    DEFINES += USE_UPNP=$$USE_UPNP STATICLIB
-    INCLUDEPATH += $$MINIUPNPC_INCLUDE_PATH
-    LIBS += $$join(MINIUPNPC_LIB_PATH,,-L,) -lminiupnpc
-    win32:LIBS += -liphlpapi
+    message(Still no UPNP Support)
+#   # message(Building with OUT UPNP support)
+#   # count(USE_UPNP, 0) {
+#        USE_UPNP=
+#    }
+#    DEFINES += USE_UPNP=$$USE_UPNP STATICLIB
+#    INCLUDEPATH += $$MINIUPNPC_INCLUDE_PATH
+#    LIBS += $$join(MINIUPNPC_LIB_PATH,,-L,) -lminiupnpc
+#    win32:LIBS += -liphlpapi
 }
 
 # use: qmake "USE_DBUS=1"
