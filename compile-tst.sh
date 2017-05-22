@@ -1,4 +1,5 @@
 #!/bin/bash
+#It work! Hallelejush or however you spell it
 MXE_INCLUDE_PATH=/mnt/mxe/usr/i686-w64-mingw32.static/include
 MXE_LIB_PATH=/mnt/mxe/usr/i686-w64-mingw32.static/lib
 
